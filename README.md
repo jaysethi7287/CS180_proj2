@@ -2,7 +2,7 @@
 - **SID**: 3035895316
 - **Email**: [jayaditya@berkeley.edu](mailto:jayaditya@berkeley.edu)
 
-**Link**: [https://inst.eecs.berkeley.edu/~cs180/fa23/upload/files/proj2/jayaditya](https://inst.eecs.berkeley.edu/~cs180/fa23/upload/files/proj2/jayaditya)
+**Link**: [https://inst.eecs.berkeley.edu/~cs180/fa23/upload/files/proj2/jayaditya/proj2/](https://inst.eecs.berkeley.edu/~cs180/fa23/upload/files/proj2/jayaditya/proj2/)
 
 ## Project 2
 
