@@ -1,0 +1,613 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>180 Project 2</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 24px;
+            color: #4A90E2;
+        }
+    
+        h3 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #4A90E2;
+        }
+
+        ol {
+            color: #555
+        }
+    
+        /* General styles */
+        body {
+            font-family: "Roboto", sans-serif;
+            background-color: #EDEDED; /* Light gray background */
+            color: #eee;
+        }
+    
+        /* Header styles */
+        header {
+            text-align: center;
+            background-color: #113358; /* Green header background */
+            color: #fff;
+            padding: 24px 0;
+            position: relative;
+        }
+    
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            padding: 16px; /* Add padding to center and space h1 */
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+    
+        header p {
+            font-size: 20px;
+            margin-top: 16px;
+        }
+    
+        /* Navigation styles (customize as needed) */
+        nav {
+            text-align: center;
+            background-color: #eee;
+            color: #fff;
+            padding: 12px 0;
+        }
+    
+        /* Main content styles */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+    
+        /* Text Overview Section styles */
+        .text-overview {
+            text-align: center;
+            padding: 24px;
+            background-color: #F9F9F9; /* Light gray text background */
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            margin-bottom: 20px; /* Add margin to create separation */
+        }
+    
+        .text-overview h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #4A90E2;
+        }
+    
+        .text-overview p {
+            font-size: 20px;
+            margin: 16px 0;
+            color: #666;
+            text-align: left;
+        }
+    
+        /* Image section styles */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    
+        .image-item2 {
+            width: calc(50% - 20px);
+            margin-right: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #F9F9F9; /* Light gray image background */
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            transition: transform 0.3s ease-in-out;
+
+        }
+        .image-item1 {
+            width: calc(100% - 20px);
+            margin-right: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #F9F9F9; /* Light gray image background */
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            transition: transform 0.3s ease-in-out;
+            
+        }
+        .image-item1 img {
+    max-width: 100%;
+    max-height: 100%;
+}     .image-item2 img {
+    max-width: 100%;
+    max-height: 100%;
+}     .image-item2 img {
+    max-width: 100%;
+    max-height: 100%;
+}     .image-item2 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+        .image-item3 {
+            width: calc(33% - 20px);
+            margin-right: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #F9F9F9; /* Light gray image background */
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-item4 {
+            width: calc(25% - 20px);
+            margin-right: 20px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #F9F9F9; /* Light gray image background */
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            transition: transform 0.3s ease-in-out;
+        }
+    
+        .image-item:hover {
+            transform: scale(1.05);
+        }
+    
+        .image-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        .image-item p {
+            text-align: center;
+            font-size: 18px;
+            margin: 16px 0;
+            color: #555;
+        }
+    
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 24px;
+            background-color: #eee;
+            color: #aaa;
+        }
+    
+        .footer p {
+            font-size: 16px;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <h1>
+            Fun with Filters and Frequencies!<br>
+        </h1>
+            <h2>Project 2 | Jayaditya Sethi | 3035895316</h2>
+    </header>
+    
+    <main>
+
+
+
+
+            <!-- Overview Section -->
+            <section class="text-overview">
+                <h2>Overview</h2>
+                <p>
+                    In this project, our primary goal is to understand the significance and application of 2D convolutions and filtering techniques, focusing on edge detection. We began with the finite difference operator to compute the partial derivatives in x and y directions. Later, we explored the Derivative of Gaussian (DoG) filter to reduce noise and enhance the edges in the image.
+                </p>
+            </section>
+        
+            
+            <!-- Finite Difference Operator Section -->
+<section class="text-overview">
+    <h2>[1.1] Finite Difference Operator</h2>
+    <p>
+        The finite difference method is a foundational approach for edge detection. It captures rapid intensity changes in an image by computing the image's derivatives. In our approach, we defined finite difference operators, \(D_x\) and \(D_y\), for the x and y directions respectively. Upon convolving our grayscale image with these operators, we obtained the partial derivatives that highlight the horizontal and vertical changes in pixel values. To represent the overall edge strength, we computed the gradient magnitude, a combination of these derivatives. Furthermore, to accentuate the actual edges and suppress noise, we binarized this magnitude using a threshold, derived from the 94th percentile of the gradient magnitude values.
+    </p>
+    <div class="image-container">
+        <div class="image-item1">
+            <img src="dump/normal.png" alt="Finite Difference Results">
+            <p style="text-align:center;">Transition from the original image to its derivatives in x and y, the gradient magnitude, and the binarized edge representation.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Derivative of Gaussian (DoG) Filter Section -->
+<section class="text-overview">
+    <h2>[1.2] Derivative of Gaussian (DoG) Filter</h2>
+    <p>
+        The finite difference operator, while effective, is sensitive to noise. To enhance edge detection while suppressing noise, we employed the Derivative of Gaussian (DoG) technique. First, we smoothed our grayscale image using a Gaussian filter. This blurred version of the image reduces high-frequency noise, preparing it for a more effective edge detection. Subsequently, on this blurred image, we computed the derivatives using the Gaussian filter in both x and y directions. This approach, which combines the blurring and derivative operations, is known as the Derivative of Gaussian. The resulting gradient magnitude showcases prominent edges in the image after the Gaussian smoothing.<br><br>
+        We then utilize an optimisation (the DoG filter) that directly computes the derivative of the gaussian filter, reducing our total convolutions from 2 to 1. This yielded the same gradient magnitude as did the previous approach.
+    </p>
+    <div class="image-container">
+        <div class="image-item1">
+            <img src="dump/gaussian.png" alt="DoG Results">
+            <p style="text-align:center;">Transition showcasing the original image, its blurred version using the Gaussian filter, derivatives in x and y using the Gaussian filter, and the gradient magnitude.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Gradient Magnitude Computation Section -->
+<section class="text-overview">
+    <h2>Gradient Magnitude Computation</h2>
+    <p>
+        Gradient magnitude is a measure of change or intensity variations in an image. By computing the partial derivatives in both x and y directions, we capture the horizontal and vertical changes in pixel values. The gradient magnitude combines these changes to provide an overall sense of edge strength at each pixel. It plays a pivotal role in edge detection, allowing us to identify areas of interest in images, especially when binarized using a suitable threshold.
+    </p>
+</section>
+
+
+<!-- Answers to Part 1.2 -->
+<section class="text-overview">
+    <h2>Reflections on Part 1.2</h2>
+    <p>
+        <strong>What differences do you see?</strong><br>
+        By using the Gaussian filter for edge detection, the results were considerably less noisy. The edges were more pronounced and clearer in the DoG approach than the finite difference method. The Gaussian filter effectively reduced the high-frequency noise, making the edges more distinct and the overall image more visually coherent.
+    </p>
+    <p>
+        <strong>Verify that you get the same result as before.</strong><br>
+        <u>Between the 2 convolution based DoG filter approach and the 1 convolution based approach:</u><br> The results were the same.
+    </p>
+    <p>
+    <u>Between the Finite Difference Operator and the DoG filter:</u><br> While the fundamental edge structures were consistent between the two methods, the DoG approach provided a more refined and less noisy result. The edges were smoother, more continuous, and the background noise was significantly reduced, underscoring the advantage of incorporating Gaussian smoothing in edge detection.
+    </p>
+</section>
+
+
+<!-- [2.1] Image Sharpening Section -->
+
+<section class="text-overview">
+    <h2>[2.1] Image "Sharpening"</h2>
+    <p>
+        Image sharpening is a pivotal technique in image processing, aimed at enhancing the clarity and details of an image. This is achieved by accentuating its high-frequency components. In this segment, I explored the effectiveness and intricacies of the Laplacian of Gaussian (LoG) filter for the sharpening process.
+    </p>
+</section>
+
+<!-- Discussion of the Laplacian of Gaussian (LoG) Filter -->
+
+<section class="text-overview">
+    <h3>Laplacian of Gaussian (LoG) Filter</h3>
+    <p>
+        The Laplacian of Gaussian (LoG) filter plays a pivotal role in image sharpening. It's essentially an amalgamation of two filters: the Gaussian filter, which blurs the image, and the Laplacian filter, which detects edges. By combining these filters, the LoG accentuates the high-frequency components of an image while suppressing the low-frequency components.
+    </p>
+    <div class="image-container">
+        <div class="image-item1">
+            <img src="dump/LoG.png" alt="LoG Kernel">
+
+        </div> </div>
+        <p>
+            I constructed the LoG filter using a specific equation derived from the concept of the Unsharp Mask filter. The equation is: <br><br>
+            <em style="text-align: center; display: block;"> <strong>f* ((1 + α) e - α g)</strong></em><br>
+            where <em>f</em> is the image, <em>f*g</em> is the blurred image, and <em>e</em> is the unit impulse (identity). This can be computed by determining the Laplacian of Gaussian kernel <em>(1+α)e−αg</em> and then convolving that with the image. The identity, or the unit impulse, is the same size as the Gaussian kernel.
+            <br><br>
+            For our Gaussian component, a sigma value of 3 was chosen based on the observation that it provided optimal blurring without excessively suppressing essential details. The alpha parameter, set to 1.5, determined the strength of the sharpening by controlling the weight of high frequencies. The size of the kernel was determined as three times the sigma on each side, ensuring adequate coverage of the Gaussian function. This allowed the high frequencies to be accentuated, giving us sharpened images like the following:
+        </p>
+        
+        <div class="image-container">
+        <div class="image-item1">
+            <img src="dump/taj.png" alt="Taj Before and After Sharpening">
+
+        </div>
+    </div>
+</section>
+
+<!-- Effectiveness on Other Images -->
+
+<section class="text-overview">
+    <h3>Effectiveness on Other Images</h3>
+    <p>
+        To verify the universal applicability of the LoG filter, I applied it to various images. The results consistently showcased a significant enhancement in image details, rendering them sharper and more vivid.
+    </p>
+    <div class="image-container">
+        <div class="image-item1">
+            <img src="dump/colliseum.png" alt="Colliseum Before and After Sharpening">
+            
+        </div>
+        <div class="image-item1">
+            <img src="dump/elcastillo.png" alt="El Castillo Before and After Sharpening">
+            
+        </div>
+        <div class="image-item1">
+            <img src="dump/wallOfChina.png" alt="Great Wall of China Before and After Sharpening">
+        </div>
+    </div>
+</section>
+
+<!-- Evaluation of Resharpening -->
+
+<section class="text-overview">
+    <h3>Resharpening Evaluation</h3>
+    <p>
+        A unique aspect of image sharpening is the possibility of applying the process repeatedly. To evaluate the effects of resharpening, I applied our LoG filter on an image that had been blurred. The results, as visualized below, show the transition from the original image to a blurred version, and then to a re-sharpened version. This shows retrieving a similar image as before, a little more sharpened.
+    </p>
+    <div class="image-container">
+        <div class="image-item1">
+            <img src="dump/resharpening.png" alt="Resharpening Progression" style="width:100%">
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Hybrid Images Section -->
+<section class="text-overview">
+    <h2>[2.2] Hybrid Images</h2>
+    <p>
+        Hybrid images blend the high-frequency portion of one image with the low-frequency portion of another, resulting in an image that changes in interpretation depending on the viewing distance. This phenomenon leverages the fact that high frequencies dominate perception when close, but from a distance, only the low frequency (smoother) parts of the signal are discernible.
+    </p>
+</section>
+
+<!-- Generation of the First Hybrid Image Section -->
+<section class="text-overview">
+    <h2>Generation of the First Hybrid Image</h2>
+    <p>
+        To generate the initial hybrid image, I took two images: one of a Professor Hilfinger and another of Professor DeNero. </p>
+        <div class="image-container">
+        
+            <div class="image-item2">
+                <!-- Assuming the name of the cheetah and hippo hybrid is 'cheetahAndHippo.png' -->
+                <img src="dump/prof2.jpg" alt="Hybrid Example" style="width:50%">
+                <p style="text-align: center;">High frequency filter input</p>
+                
+            </div>
+            <div class="image-item2">
+                <!-- Assuming the name of the cheetah and hippo hybrid is 'cheetahAndHippo.png' -->
+                
+                <img src="dump/profOne.jpg" alt="Hybrid Example" style="width:50%">
+                <p style="text-align: center;">Low frequency filter input</p>
+            </div>
+        </div>
+    </section>
+    <section class="text-overview">
+        <h2>Bells & Whistles</h2>
+        <p>I explored different combinations of color intensities for the high and low frequencies to determine the best hybrid outcome. 
+        </p>
+        <div class="image-container">
+            <div class="image-item1">
+                <img src="dump/allColouringVariationsProf1Prof2.png" alt="All Coloring Variations">
+                
+            </div>
+        </div>
+        <p>
+            A significant part of the hybrid image creation process is deciding on the color intensities for the high and low frequencies. As can be seen in the 4 combinations below, the low frequencies have an abnormal contribution to the total colour of the image whereas the high frequencies barely contribute to the colour of the image. This was because colour is a feature captured best by the low frequencies of the image and hardly captured by the high frequencies as high frequencies capture the detail/edges.
+        </p>
+        <div class="image-container">
+            <div class="image-item1">
+                <img src="dump/chosenProfOneProf2TenPercent.png" alt="Chosen Hybrid Image">
+
+            </div>
+        </div>
+        <p>
+            Therefore, the optimal combination was found to be 10% color intensity for the low-frequency image and 100% for the high-frequency image to balance the abnormal colour contribution to the image.  10%  combination preserved the essence of the high-frequency image while smoothly blending in the low-frequency content, yielding a clear hybrid image that changes in interpretation as one adjusts their viewing distance.
+        </p>
+    </section>
+
+<!-- Fourier Analysis Section -->
+<section class="text-overview">
+    <h2>Fourier Analysis</h2>
+    <p>
+        The Fourier analysis provides insights into the frequency components of an image. By showcasing the log magnitude of the Fourier transform of the input images, their filtered versions, and the hybrid image, I could better understand the frequency blend achieved in the hybrid image.
+    </p>
+    <div class="image-container">
+        <div class="image-item1">
+            <img src="dump/ff.png" alt="Fourier Analysis">
+
+        </div>
+    </div>
+</section>
+
+<!-- Other Examples Section -->
+<section class="text-overview">
+    <h2>Other Examples</h2>
+    <p>
+        Beyond our initial test, I experimented with other images to create distinct hybrid results. Here's another successful hybrid image example:
+    </p>
+    <!-- You can add more images here as needed -->
+    <div class="image-container">
+        
+        <div class="image-item2">
+            <!-- Assuming the name of the cheetah and hippo hybrid is 'cheetahAndHippo.png' -->
+            <img src="dump/cheetah.jpg" alt="Hybrid Example">
+            <p style="text-align: center;">High frequency filter input</p>
+            
+        </div>
+        <div class="image-item2">
+            <!-- Assuming the name of the cheetah and hippo hybrid is 'cheetahAndHippo.png' -->
+            
+            <img src="dump/hippo.jpg" alt="Hybrid Example">
+            <p style="text-align: center;">Low frequency filter input</p>
+        </div>
+        <div class="image-item1">
+            <!-- Assuming the name of the cheetah and hippo hybrid is 'cheetahAndHippo.png' -->
+            <img src="dump/cheetahAndHippo.png" alt="Hybrid Example">
+            <p style="text-align: center;">A hybrid image blending a cheetah and a hippo.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Failed Hybrid Image Section -->
+<section class="text-overview">
+    <h2>Failed Hybrid Image</h2>
+    <p>
+        Not all combinations of images yield clear hybrid results. Here's an example where the hybridization process did not produce a satisfactory outcome:
+    </p>
+    <div class="image-container">
+        <div class="image-item2">
+            <!-- Assuming the name of the cheetah and hippo hybrid is 'cheetahAndHippo.png' -->
+            <img src="dump/dog.jpg" alt="Hybrid Example">
+            <p style="text-align: center;">High frequency filter input</p>
+            
+        </div>
+        <div class="image-item2">
+            <!-- Assuming the name of the cheetah and hippo hybrid is 'cheetahAndHippo.png' -->
+            
+            <img src="dump/baby.jpg" alt="Hybrid Example">
+            <p style="text-align: center;">Low frequency filter input</p>
+        </div>
+        <div class="image-item1">
+            <img src="dump/dogAndManFailure.png" alt="Failed Hybrid Image">
+            <p style="text-align: center;">A failed hybrid image attempt between a dog and a man.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Introduction -->
+<section class="text-overview">
+    <h2>[2.3] Multi-resolution Blending</h2>
+    <p>
+        Multi-resolution blending combines two images seamlessly by leveraging Gaussian and Laplacian stacks. The technique, based on the 1983 paper by Burt and Adelson, offers a smoother transition between images by operating on various frequency bands separately.
+    </p>
+</section>
+
+<!-- Gaussian and Laplacian Stacks -->
+<section class="text-overview">
+    <h2>Gaussian and Laplacian Stacks</h2>
+    <p>
+        The first step towards a seamless blend involves creating Gaussian and Laplacian stacks. Unlike pyramids, stacks don't downsample images, preserving the original dimensions. While Gaussian stacks are created by repeatedly applying the Gaussian filter, the Laplacian stack is derived from the difference between consecutive levels of the Gaussian stack.
+    </p>
+    <div class="image-container">
+        <div class="image-item2">
+            <img src="data/2.3/apple.jpeg" alt="Apple Image">
+            <p style="text-align: center;">Apple</p>
+        </div>
+        <div class="image-item2">
+            <img src="data/2.3/orange.jpeg" alt="Orange Image">
+            <p style="text-align: center;">Orange</p>
+        </div>
+    </div>
+</section>
+
+<!-- Visualizing the Stacks -->
+<section class="text-overview">
+    <h2>Visualizing Gaussian and Laplacian Stacks</h2>
+    <div class="image-container">
+        <div class="image-item2">
+            <img src="dump/gaussianPyramids.png" alt="Gaussian Pyramids">
+            <p style="text-align: center;">Gaussian Pyramids of Apple and Orange</p>
+        </div>
+        <div class="image-item2">
+            <img src="dump/laplacianPyramid.png" alt="Laplacian Pyramids">
+            <p style="text-align: center;">Laplacian Pyramids of Apple and Orange</p>
+        </div>
+    </div>
+</section>
+
+<!-- Blending using Multi-resolution -->
+<section class="text-overview">
+    <h2>Blending using Multi-resolution</h2>
+    <p>
+        The Laplacian stacks of the images are blended together based on a mask to determine from which image each pixel should come. The result is a smooth transition between the two images, especially at the boundary.
+    </p>
+    <div class="image-container">
+        <div class="image-item1">
+            <img src="dump/blendedStack.png" alt="Blended Stack">
+            <p style="text-align: center;">Blended Stack of Apple and Orange</p>
+        </div>
+        <div class="image-item1">
+            <img src="dump/orapple.png" alt="Orapple">
+            <p style="text-align: center;">Final Orapple Result</p>
+        </div>
+    </div>
+</section>
+
+<!-- Additional Examples -->
+<section class="text-overview">
+    <h2>Additional Examples</h2>
+    <p>
+        Beyond the initial blend of apple and orange, I experimented with other images to achieve distinct blending results.
+    </p>
+    <div class="image-container">
+        <div class="image-item2">
+            <img src="dump/mount.jpg" alt="Mountain Image 1">
+            <p style="text-align: center;">Mountain Image 1</p>
+        </div>
+        <div class="image-item2">
+            <img src="dump/mountTwo.jpg" alt="Mountain Image 2">
+            <p style="text-align: center;">Mountain Image 2</p>
+        </div>
+        <div class="image-item1">
+            <img src="dump/combinedMount.jpg" alt="Combined Mountains">
+            <p style="text-align: center;">Blended Mountain Images</p>
+        </div>
+    </div>
+</section>
+
+<!-- Bells & Whistles Section -->
+<section class="text-overview">
+    <h2>Bells & Whistles</h2>
+    <p>
+        In a pursuit to elevate the blending effects, I explored blending with a variety of masks. While vertical and horizontal seams offer a conventional blend, using irregular masks, such as diagonal masks or random noise masks, introduces unique challenges and outcomes.
+    </p>
+    
+    <div class="image-container">
+        <div class="image-item2">
+            <img src="data/2.3/colorwheel.jpg" alt="Colorwheel Image">
+            <p style="text-align: center;">Input Image 1 (Colorwheel)</p>
+        </div>
+        
+        <div class="image-item2">
+            <img src="data/2.3/mosiac.jpg" alt="Mosiac Image">
+            <p style="text-align: center;">Input Image 2 (Mosaic)</p>
+        </div>
+        
+        <div class="image-item1">
+            <img src="dump/noiseMask.png" alt="Blended with Noise Mask">
+            <p style="text-align: center;">Blended Image using Random Noise Mask</p>
+        </div>
+    </div>
+    
+    <p>
+        The noise mask was generated using a random function, producing values either 0 or 1 based on a threshold. In the context of blending, this mask defines which parts of the image should come from the first or the second image. Specifically, for each pixel in the output image:
+    </p>
+    <p>
+        Due to the randomness of the mask, the resultant blended image exhibits unpredictable patterns, where chunks and fragments from both input images appear intermingled in a patchwork fashion. This approach does not prioritize any specific features or regions of the input images but rather blends them based on the stochastic nature of the mask. The result is a unique fusion, where elements of both images appear interspersed, offering an intriguing visual experience that combines the distinct characteristics of both images.
+    </p>
+    
+</section>
+
+<!-- Reflection Section -->
+<section class="text-overview">
+    <h2>Reflections</h2>
+    
+    <h3>Fun Aspects</h3>
+    <p>
+        This project was an enlightening journey into the world of image processing. Experimenting with different masks and observing how they influence the final blended outcome was particularly enjoyable. Observing the transformation of familiar images into something new and unexpected was thrilling.
+    </p>
+    
+    <h3>Technical Highlights</h3>
+    <p>
+        Building the Gaussian and Laplacian stacks from scratch was a technical challenge. It deepened my understanding of how images are manipulated at different frequency levels. Implementing the blending algorithm, especially with unconventional masks, required meticulous attention to detail.
+    </p>
+    
+    <h3>Crème de la Crème</h3>
+    <p>
+        The pinnacle of this project was witnessing the power of multi-resolution blending. It's fascinating how two distinct images can be merged so seamlessly, preserving the essence of both. The noise mask blending, in particular, showcased how even a seemingly random approach can produce captivating results.
+    </p>
+</section>
+
+
+
+
+    </main>
+    
+</body>
+</html>
